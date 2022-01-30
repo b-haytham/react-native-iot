@@ -1,15 +1,19 @@
 import React from "react";
 
-import { Button, Text } from "native-base";
+import { Box, Button, Heading, Text } from "native-base";
 import Layout from "../components/Layout";
 
 import { HomeScreenProps } from "../navigation/types";
 
-const Home: React.FC<HomeScreenProps> = ({ navigation, route }) => {
+const Home: React.FC<HomeScreenProps> = ({}) => {
   return (
     <Layout>
-      <Text> Home </Text>
-      <Button onPress={() => navigation.navigate("Other")}> Go </Button>
+      <Box p={2}>
+        <Heading size={"lg"} color={"primary.800"}>
+          Welcome Back !
+        </Heading>
+        <Text opacity={0.8}>John Doe</Text>
+      </Box>
     </Layout>
   );
 };
